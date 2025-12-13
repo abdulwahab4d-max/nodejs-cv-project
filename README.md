@@ -1,7 +1,7 @@
 # nodejs-cv-project
 CV project in nodejs
 
-1. On pushing the project the GitHub, it automatically generates the docker image and upload it to dockerhub account.
+1. On pushing the project to the GitHub, it automatically generates the docker image and upload it to dockerhub account.
 2. First of all, Application Load Balancer is initiated.
 3. Cluster is made through terraform.
 4. It makes a ECS Fargate Cluster to maintain that the nodejs project is up and live all the time.
