@@ -28,10 +28,12 @@ jobs:
     # Build the Docker image
     - name: Build Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/abdulwahab4d/nodejs-cv:$GITHUB_SHA .
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/nodejs-cv:$GITHUB_SHA \
+                     -t ${{ secrets.DOCKER_USERNAME }}/nodejs-cv:latest .
         # Replace 'my-node-app' with the name of your app
     # Push the Docker image to Docker Hub
     - name: Push Docker image
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME }}/abdulwahab4d/nodejs-cv:$GITHUB_SHA
+        docker push ${{ secrets.DOCKER_USERNAME }}/nodejs-cv:$GITHUB_SHA
+        docker push ${{ secrets.DOCKER_USERNAME }}/nodejs-cv:latest
         # Replace 'my-node-app' with your app's name
