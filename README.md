@@ -1,27 +1,11 @@
-# nodejs-helloworld-api-project
-Hello world api project in nodejs
+# nodejs-cv-project
+CV project in nodejs
 
-
-
-1. Become a root user in EC2 server. 
-sudo su - root
-
-2. Install GIT Client in EC2 server
-sudo yum install git -y
-
-3. Download code from GIT repository to EC2 Server
-git clone https://github.com/codeonedigest/nodejs-helloworld-api-project.git
-
-4. Install NVM (node version manager) in EC2 server
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-. ~/.nvm/nvm.sh
-
-5. Install Node server and NPM in EC2 Instance
-nvm install --lts
-
-6. Start node server to run node application
-node server.js
-
-
-7. Now open following url in browser to hit api.
+1. On pushing the project the GitHub, it automatically generates the docker image and upload it to dockerhub account.
+2. First of all, Application Load Balancer is initiated.
+3. Cluster is made through terraform.
+4. It makes a ECS Fargate Cluster to maintain that the nodejs project is up and live all the time.
+5. Total 3 Containers will be up live all the time.
+6. It starts node server to run node application node server.js
+7. It works on when you open following url in browser to hit api.
  http://<EC2 Server Hostname>:8080/hellow
